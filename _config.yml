@@ -1,1 +1,32 @@
-theme: jekyll-theme-tactile
+# Site settings
+name: Isaias Xicale
+title: Isaias Xicale | Sr Fullstack Developer
+description: Software engineer focused on building products for the web with passion for design and technology.
+url: https://ixicale.github.io/
+baseurl: ''
+email: ixicaleescalante@gmail.com
+social:
+  - title: email
+    url: mailto:ixicaleescalante@gmail.com
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - '*.gemspec'
+  - 'README.md'
+  - 'node_modules'
+  - 'build'
+  - 'gulpfile.js'
+  - 'package.json'
+
+keep_files:
+  - 'CNAME'
+  - '.git'
+  - '.gitignore'
+
+plugins_dir:
+  - jekyll-minifier
+  - jekyll-sitemap
