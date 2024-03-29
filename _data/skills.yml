@@ -1,0 +1,94 @@
+DevLanguagesAndFrameworks:
+  - name: Python
+    icon: https://img.icons8.com/color/48/000000/python.png
+  - name: TypeScript
+    icon: https://img.icons8.com/color/48/000000/typescript.png
+  - name: JavaScript (ES6)
+    icon: https://img.icons8.com/color/48/000000/javascript.png
+  - name: Vue
+    icon: https://img.icons8.com/color/48/000000/vue-js.png
+  - name: Go
+    icon: https://img.icons8.com/color/48/000000/golang.png
+  - name: Node
+    icon: https://img.icons8.com/color/48/000000/nodejs.png
+  - name: React
+    icon: https://img.icons8.com/color/48/000000/react-native.png
+
+MarkupAndStyling:
+  - name: HTML
+    icon: https://img.icons8.com/color/48/000000/html-5.png
+  - name: CSS/Sass
+    icon: https://img.icons8.com/color/48/000000/css3.png
+  - name: Markdown
+    icon: https://img.icons8.com/color/48/000000/markdown.png
+  - name: Figma
+    icon: https://img.icons8.com/color/48/000000/figma.png
+
+DatabaseTechnologies:
+  - name: SQL
+    icon: https://img.icons8.com/color/48/000000/sql.png
+  - name: MySQL
+    icon: https://img.icons8.com/color/48/000000/mysql.png
+  - name: PostgreSQL
+    icon: https://img.icons8.com/color/48/000000/postgresql.png
+  - name: MongoDB
+    icon: https://img.icons8.com/color/48/000000/mongodb.png
+  - name: Firebase
+    icon: https://img.icons8.com/color/48/000000/firebase.png
+
+DevelopmentTools:
+  - name: Git
+    icon: https://img.icons8.com/color/48/000000/git.png
+  - name: Chrome DevTools
+    icon: https://img.icons8.com/color/48/000000/chrome.png
+  - name: Postman
+    icon: https://img.icons8.com/color/48/000000/postman-api.png
+  - name: VS Code
+    icon: https://img.icons8.com/color/48/000000/visual-studio-code-2019.png
+  - name: Jenkins
+    icon: https://img.icons8.com/color/48/000000/jenkins.png
+  - name: Docker
+    icon: https://img.icons8.com/color/48/000000/docker.png
+  - name: Bash
+    icon: https://img.icons8.com/color/48/000000/console.png
+  - name: Github Actions
+    icon: https://img.icons8.com/color/48/000000/github.png
+  - name: WSL
+    icon: https://img.icons8.com/color/48/000000/windows-subsystem-for-linux.png
+
+ManagementTools:
+  - name: Bitbucket
+    icon: https://img.icons8.com/color/48/000000/bitbucket.png
+  - name: Trello
+    icon: https://img.icons8.com/color/48/000000/trello.png
+  - name: Github
+    icon: https://img.icons8.com/color/48/000000/github.png
+  - name: Jira
+    icon: https://img.icons8.com/color/48/000000/jira.png
+  - name: Gitlab
+    icon: https://img.icons8.com/color/48/000000/gitlab.png
+
+CloudAndDeploymentServices:
+  - name: AWS
+    icon: https://img.icons8.com/color/48/000000/amazon-web-services.png
+  - name: Heroku
+    icon: https://img.icons8.com/color/48/000000/heroku.png
+  - name: Netlify
+    icon: https://img.icons8.com/color/48/000000/netlify.png
+
+OperatingSystems:
+  - name: Windows
+    icon: https://img.icons8.com/color/48/000000/windows-10.png
+  - name: Linux
+    icon: https://img.icons8.com/color/48/000000/linux.png
+  - name: MacOS
+    icon: https://img.icons8.com/color/48/000000/mac-os.png
+
+Languages:
+  - name: Spanish
+  - name: English
+
+Methodologies:
+  - name: Agile
+  - name: Scrum
+  - name: Kanban
