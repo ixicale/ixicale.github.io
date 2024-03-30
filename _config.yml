@@ -20,7 +20,6 @@ exclude:
   - 'README.md'
   - 'node_modules'
   - 'build'
-  - 'gulpfile.js'
   - 'package.json'
 
 keep_files:

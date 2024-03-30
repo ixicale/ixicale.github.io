@@ -1,0 +1,41 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a data-target="myNavbar" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="myNavbar" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item"> Home </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          <span class="icon is-small">
+            <i class="fas fa-lg fa-sun" id="currentTheme" aria-hidden="true"></i>
+          </span>
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" id="themeMoon">
+            <span class="icon is-small">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </span>
+            <span>Dark theme</span>
+          </a>
+          <a class="navbar-item" id="themeSun">
+            <span class="icon is-small">
+              <i class="fas fa-sun" aria-hidden="true"></i>
+            </span>
+            <span>Light theme</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
