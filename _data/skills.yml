@@ -1,3 +1,37 @@
+skills:
+  - name: Frontend
+    icon: https://img.icons8.com/color/48/000000/frontend.png
+    sections:
+      - name: Dev Languages & Frameworks
+        items: DevLanguagesAndFrameworks
+      - name: Markup & Styling
+        items: MarkupAndStyling
+  - name: Backend
+    icon: https://img.icons8.com/color/48/000000/backend.png
+    sections:
+      - name: Dev Languages & Frameworks
+        items: DevLanguagesAndFrameworks
+      - name: Database Technologies
+        items: DatabaseTechnologies
+  - name: Tools
+    icon: https://img.icons8.com/color/48/000000/tools.png
+    sections:
+      - name: Development Tools
+        items: DevelopmentTools
+      - name: Management Tools
+        items: ManagementTools
+      - name: Cloud & Deployment Services
+        items: CloudAndDeploymentServices
+  # - name: Operating Systems
+  #   icon: https://img.icons8.com/color/48/000000/operating-system.png
+  #   sections:
+  # - name: Languages
+  #   icon: https://img.icons8.com/color/48/000000/language.png
+  #   sections:
+  # - name: Methodologies
+  #   icon: https://img.icons8.com/color/48/000000/methods.png
+  #   sections:
+
 DevLanguagesAndFrameworks:
   - name: Python
     icon: https://img.icons8.com/color/48/000000/python.png

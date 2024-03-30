@@ -1,8 +1,37 @@
-<div class="">
-  <div class="">Languages</div>
-  <ul>
-    {% for tech in site.data.skills.DevLanguagesAndFrameworks %}
-    <li class="">{{tech.name}}</li>
+<div class="fixed-grid has-auto-count">
+  <div class="grid">
+    {% for category in site.data.skills %}
+    <div class="cell">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-header-title">{{category.name}}</div>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            {% for section in category.sections %}
+            <div class="columns">
+              <div class="column">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-header-title">{{section.name}}</div>
+                  </div>
+                  <div class="card-content">
+                    <div class="content">
+                      <ul>
+                        {% for item in section.items %}
+                        <li>{{item.name}}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
