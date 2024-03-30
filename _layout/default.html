@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  {% include head.html %}
-</head>
-
-<body>
-  <div class="container">
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="not-found">
     {{ content }}
-    {% include scripts.html %}
     {% include footer.html %}
-  </div>
-</body>
-
+    {% include scripts.html %}
+  </body>
 </html>
