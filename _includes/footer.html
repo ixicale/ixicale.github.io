@@ -5,14 +5,12 @@
     </div>
     <div class="bottom">
       <span>Isaias Xicale</span>
-      <img class="emoji" src="{{site.baseurl}}/img/emojis/rockon.png" alt="emoji" />
       <span>2024</span>
     </div>
   </div>
   <div class="footer__links">
     {% for contact in site.data.catalog.social %}
     <a href="{{contact.url}}" target="_blank" title="{{contact.title}}">
-      <span class="text">{{contact.title}}</span>
       <img src="{{contact.icon}}" alt="{{contact.title}}" />
     </a>
     {% endfor %}
