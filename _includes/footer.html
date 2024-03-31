@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="footer__copyright">
+  <div class="content has-text-centered">
     <div class="top">
       <span>Designed &amp; Developed by</span>
     </div>
@@ -7,8 +7,7 @@
       <span>Isaias Xicale</span>
       <span>2024</span>
     </div>
-  </div>
-  <div class="footer__links">
+
     {% for contact in site.data.catalog.social %}
     <a href="{{contact.url}}" target="_blank" title="{{contact.title}}">
       <img src="{{contact.icon}}" alt="{{contact.title}}" />
