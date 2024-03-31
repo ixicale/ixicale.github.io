@@ -1,40 +1,16 @@
-<!--
-## Welcome to GitHub Pages
+# ixicale.github.io
 
-You can use the [editor on GitHub](https://github.com/ixicale/ixicale.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This is the repository for my personal website. It is built using Jekyll and hosted on GitHub Pages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Made with
 
-### Markdown
+- [Jekyll](https://jekyllrb.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Bulma](https://bulma.io/)
+- [Font Awesome](https://fontawesome.com/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## License
 
-```markdown
-Syntax highlighted code block
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ixicale/ixicale.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
-
---/>
+### If you like my work, consider buying me a [Ko-fi](https://ko-fi.com/ixicale) 🍵 and help me with a star ⭐

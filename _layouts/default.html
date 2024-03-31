@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
   <head>
     {% include head.html %}
   </head>
   <body class="not-found">
+    {% include component/navbar.html %}
     {{ content }}
     {% include footer.html %}
     {% include scripts.html %}
