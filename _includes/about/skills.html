@@ -1,23 +1,28 @@
-<div class="cell">
-  {% for category in site.data.skills.categories %}
-  <div class="card">
-    <div class="card-header">
-      <div class="card-header-title">{{category.name}}</div>
-    </div>
-    <div class="card-content">
-      <div class="columns is-mobile">
-        {% for section in category.sections %}
-        <div class="column">
-          <b>{{section.name}}</b>
-          <ul>
-            {% for item in site.data.skills[section.items] %}
-            <li>{{item.name}}</li>
-            {% endfor %}
-          </ul>
+<div class="fixed-grid has-2-count">
+  <div class="grid">
+    {% for category in site.data.skills.categories %}
+    <div class="cell">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-header-title">{{category.name}}</div>
         </div>
-        {% endfor %}
+        <div class="card-content">
+          <div class="columns is-mobile">
+            {% for section in category.sections %}
+            <div class="column">
+              <b>{{section.name}}</b>
+              <hr />
+              <ul>
+                {% for item in site.data.skills[section.items] %}
+                <li>{{item.name}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
