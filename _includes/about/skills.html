@@ -1,8 +1,8 @@
-<div class="fixed-grid has-2-count">
-  <div class="grid">
+<div class="fixed-grid has-2-count has-1-cols-mobile">
+  <div class="grid p-auto">
     {% for category in site.data.skills.categories %}
-    <div class="cell">
-      <div class="card">
+    <div class="cell is-flex">
+      <div class="card is-flex-grow-1">
         <div class="card-header">
           <div class="card-header-title">{{category.name}}</div>
         </div>
