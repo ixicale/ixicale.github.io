@@ -15,7 +15,10 @@
               <div class="tags are-medium">
                 {% for item in site.data.skills[section.items] %}
                 <div class="tag is-hoverable is-rounded">
-                  <img src="{{site.baseurl}}{{item.icon}}" alt="{{item.name}}" />
+                  <figure class="image is-16x16">
+                    <img class="has-ratio" src="{{site.baseurl}}{{item.icon}}" />
+                  </figure>
+
                   {{item.name}}
                 </div>
                 {% endfor %}
