@@ -1,6 +1,6 @@
 <div class="columns" id="experience">
-  <div class="column is-4">
-    {% for xp in site.data.experience %}
+  {% for xp in site.data.experience %}
+  <div class="column is-4"> 
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -24,6 +24,6 @@
         </div>
       </div>
     </div>
-    {% endfor %}
   </div>
+  {% endfor %}
 </div>
