@@ -1,88 +1,88 @@
 DevLanguagesAndFrameworks:
   - name: Python
-    asset: /assets/images/python.png
+    icon: /assets/images/python.png
   - name: TypeScript
-    asset: /assets/images/typescript.png
+    icon: /assets/images/typescript.png
   - name: JavaScript (ES6)
-    asset: /assets/images/javascript.png
+    icon: /assets/images/javascript.png
   - name: Vue
-    asset: /assets/images/vue.png
+    icon: /assets/images/vue-js.png
   - name: Go
-    asset: /assets/images/go.png
+    icon: /assets/images/golang.png
   - name: Node
-    asset: /assets/images/node.png
+    icon: /assets/images/nodejs.png
   - name: React
-    asset: /assets/images/react.png
+    icon: /assets/images/react-native.png
 
 MarkupAndStyling:
   - name: HTML
-    asset: /assets/images/html.png
+    icon: /assets/images/html-5.png
   - name: CSS/Sass
-    asset: /assets/images/css-sass.png
+    icon: /assets/images/css3.png
   - name: Markdown
-    asset: /assets/images/markdown.png
+    icon: /assets/images/markdown.png
   - name: Figma
-    asset: /assets/images/figma.png
+    icon: /assets/images/figma.png
 
 DatabaseTechnologies:
   - name: SQL
-    asset: /assets/images/sql.png
+    icon: /assets/images/sql.png
   - name: MySQL
-    asset: /assets/images/mysql.png
+    icon: /assets/images/mysql.png
   - name: PostgreSQL
-    asset: /assets/images/postgresql.png
+    icon: /assets/images/postgresql.png
   - name: MongoDB
-    asset: /assets/images/mongodb.png
+    icon: /assets/images/mongodb.png
   - name: Firebase
-    asset: /assets/images/firebase.png
+    icon: /assets/images/firebase.png
 
 DevelopmentTools:
   - name: Git
-    asset: /assets/images/git.png
+    icon: /assets/images/git.png
   - name: Chrome DevTools
-    asset: /assets/images/chrome-devtools.png
+    icon: /assets/images/chrome.png
   - name: Postman
-    asset: /assets/images/postman.png
+    icon: /assets/images/postman.png
   - name: VS Code
-    asset: /assets/images/vs-code.png
+    icon: /assets/images/visual-studio-code-2019.png
   - name: Jenkins
-    asset: /assets/images/jenkins.png
+    icon: /assets/images/jenkins.png
   - name: Docker
-    asset: /assets/images/docker.png
+    icon: /assets/images/docker.png
   - name: Bash
-    asset: /assets/images/bash.png
+    icon: /assets/images/console.png
   - name: Github Actions
-    asset: /assets/images/github-actions.png
+    icon: /assets/images/github.png
   - name: WSL
-    asset: /assets/images/wsl.png
+    icon: /assets/images/windows-subsystem-for-linux.png
 
 ManagementTools:
   - name: Bitbucket
-    asset: /assets/images/bitbucket.png
+    icon: /assets/images/bitbucket.png
   - name: Trello
-    asset: /assets/images/trello.png
+    icon: /assets/images/trello.png
   - name: Github
-    asset: /assets/images/github.png
+    icon: /assets/images/github.png
   - name: Jira
-    asset: /assets/images/jira.png
+    icon: /assets/images/jira.png
   - name: Gitlab
-    asset: /assets/images/gitlab.png
+    icon: /assets/images/gitlab.png
 
 CloudAndDeploymentServices:
   - name: AWS
-    asset: /assets/images/aws.png
+    icon: /assets/images/amazon-web-services.png
   - name: Heroku
-    asset: /assets/images/heroku.png
+    icon: /assets/images/heroku.png
   - name: Netlify
-    asset: /assets/images/netlify.png
+    icon: /assets/images/netlify.png
 
 OperatingSystems:
   - name: Windows
-    asset: /assets/images/windows.png
+    icon: /assets/images/windows-10.png
   - name: Linux
-    asset: /assets/images/linux.png
+    icon: /assets/images/linux.png
   - name: MacOS
-    asset: /assets/images/macos.png
+    icon: /assets/images/mac-os.png
 
 Languages:
   - name: Spanish

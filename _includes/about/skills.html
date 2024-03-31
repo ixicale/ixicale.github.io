@@ -12,16 +12,12 @@
             <div class="column">
               <b>{{section.name}}</b>
               <hr />
-              <ul>
-                {% for item in site.data.skills[section.items] %}
-                <li>
-                  <span class="icon is-small">
-                    <img src="{{item.icon}}" alt="{{item.name}}" />
-                  </span>
-                  <span class="tag is-primary">{{item.name}}</span>
-                </li>
-                {% endfor %}
-              </ul>
+              {% for item in site.data.skills[section.items] %}
+                <span class="tag is-primary">
+                  <img src="{{site.baseurl}}{{item.icon}}" alt="{{item.name}}" />
+                  {{item.name}}
+                </span>
+              {% endfor %}
             </div>
             {% endfor %}
           </div>
