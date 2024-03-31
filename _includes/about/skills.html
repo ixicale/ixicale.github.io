@@ -12,12 +12,14 @@
             <div class="column">
               <b>{{section.name}}</b>
               <hr />
-              {% for item in site.data.skills[section.items] %}
-                <span class="tag is-primary">
+              <div class="tags are-medium">
+                {% for item in site.data.skills[section.items] %}
+                <div class="tag is-hoverable is-rounded">
                   <img src="{{site.baseurl}}{{item.icon}}" alt="{{item.name}}" />
                   {{item.name}}
-                </span>
-              {% endfor %}
+                </div>
+                {% endfor %}
+              </div>
             </div>
             {% endfor %}
           </div>
