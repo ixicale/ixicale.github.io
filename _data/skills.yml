@@ -93,20 +93,19 @@ Methodologies:
   - name: Scrum
   - name: Kanban
 
-categories:
-  - sections:
-      - name: Dev Languages & Frameworks
-        items: DevLanguagesAndFrameworks
-      - name: Markup & Styling
-        items: MarkupAndStyling
-      - name: Database Technologies
-        items: DatabaseTechnologies
-      - name: Development Tools
-        items: DevelopmentTools
-      - name: Management Tools
-        items: ManagementTools
-      - name: Cloud & Deployment Services
-        items: CloudAndDeploymentServices
+sections:
+  - name: Dev Languages & Frameworks
+    items: DevLanguagesAndFrameworks
+  - name: Markup & Styling
+    items: MarkupAndStyling
+  - name: Database Technologies
+    items: DatabaseTechnologies
+  - name: Development Tools
+    items: DevelopmentTools
+  - name: Management Tools
+    items: ManagementTools
+  - name: Cloud & Deployment Services
+    items: CloudAndDeploymentServices
   # - name: Operating Systems
   #   icon: https://img.icons8.com/color/48/000000/operating-system.png
   #   sections:

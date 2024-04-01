@@ -1,18 +1,24 @@
 <section class="columns is-centered is-multiline">
-  {% for category in site.data.skills.categories %} {% for section in category.sections %}
-  <div class="column is-4">
-    <p class="title is-6 has-text-primary">{{section.name}}</p>
-    <hr />
-    <div class="tags are-medium">
-      {% for item in site.data.skills[section.items] %}
-      <div class="tag is-hoverable is-rounded">
-        <figure class="image is-16x16">
-          <img class="has-ratio" src="{{site.baseurl}}{{item.icon}}" />
-        </figure>
-        {{item.name}}
+  <div class="card">
+    <div class="card-content">
+      <div class="content">
+        {% for section in site.data.skills.sections %}
+        <div class="column is-4">
+          <p class="title is-6 has-text-primary">{{section.name}}</p>
+          <hr />
+          <div class="tags are-medium">
+            {% for item in site.data.skills[section.items] %}
+            <div class="tag is-hoverable is-rounded">
+              <figure class="image is-16x16">
+                <img class="has-ratio" src="{{site.baseurl}}{{item.icon}}" />
+              </figure>
+              {{item.name}}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
-      {% endfor %}
     </div>
   </div>
-  {% endfor %} {% endfor %}
+  {% endfor %}
 </section>
