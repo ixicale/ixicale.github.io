@@ -3,14 +3,11 @@
     {% for category in site.data.skills.categories %}
     <div class="cell is-flex">
       <div class="card is-flex-grow-1">
-        <div class="card-header">
-          <div class="card-header-title">{{category.name}}</div>
-        </div>
         <div class="card-content">
           <div class="columns">
             {% for section in category.sections %}
-            <div class="column">
-              <p class="has-text-primary-dark">{{section.name}}</p>
+            <div class="column is-4">
+              <p class="title is-6 has-text-primary">{{section.name}}</p>
               <hr />
               <div class="tags are-medium">
                 {% for item in site.data.skills[section.items] %}

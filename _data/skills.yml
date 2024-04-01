@@ -94,18 +94,13 @@ Methodologies:
   - name: Kanban
 
 categories:
-  - name: Developer knowledge
-    asset: /assets/images/crystal-ball.png
-    sections:
+  - sections:
       - name: Dev Languages & Frameworks
         items: DevLanguagesAndFrameworks
       - name: Markup & Styling
         items: MarkupAndStyling
       - name: Database Technologies
         items: DatabaseTechnologies
-  - name: Tools
-    asset: /assets/images/magic-wand.png
-    sections:
       - name: Development Tools
         items: DevelopmentTools
       - name: Management Tools
