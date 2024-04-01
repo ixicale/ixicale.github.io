@@ -1,31 +1,18 @@
-<section class="fixed-grid has-2-count has-1-cols-mobile">
-  <div class="grid p-4">
-    {% for category in site.data.skills.categories %}
-    <div class="cell is-flex">
-      <div class="card is-flex-grow-1">
-        <div class="card-content">
-          <div class="columns">
-            {% for section in category.sections %}
-            <div class="column is-4">
-              <p class="title is-6 has-text-primary">{{section.name}}</p>
-              <hr />
-              <div class="tags are-medium">
-                {% for item in site.data.skills[section.items] %}
-                <div class="tag is-hoverable is-rounded">
-                  <figure class="image is-16x16">
-                    <img class="has-ratio" src="{{site.baseurl}}{{item.icon}}" />
-                  </figure>
-
-                  {{item.name}}
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
+<section class="columns is-centered is-multiline">
+  {% for category in site.data.skills.categories %} {% for section in category.sections %}
+  <div class="column is-4">
+    <p class="title is-6 has-text-primary">{{section.name}}</p>
+    <hr />
+    <div class="tags are-medium">
+      {% for item in site.data.skills[section.items] %}
+      <div class="tag is-hoverable is-rounded">
+        <figure class="image is-16x16">
+          <img class="has-ratio" src="{{site.baseurl}}{{item.icon}}" />
+        </figure>
+        {{item.name}}
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
+  {% endfor %} {% endfor %}
 </section>
