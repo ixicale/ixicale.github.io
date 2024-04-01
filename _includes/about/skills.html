@@ -1,4 +1,4 @@
-<div class="fixed-grid has-2-count has-1-cols-mobile">
+<section class="fixed-grid has-2-count has-1-cols-mobile">
   <div class="grid p-4">
     {% for category in site.data.skills.categories %}
     <div class="cell is-flex">
@@ -10,7 +10,7 @@
           <div class="columns">
             {% for section in category.sections %}
             <div class="column">
-              <b>{{section.name}}</b>
+              <p class="has-text-primary-dark">{{section.name}}</p>
               <hr />
               <div class="tags are-medium">
                 {% for item in site.data.skills[section.items] %}
@@ -31,4 +31,4 @@
     </div>
     {% endfor %}
   </div>
-</div>
+</section>

@@ -7,11 +7,6 @@
       <span>Isaias Xicale</span>
       <span>2024</span>
     </div>
-
-    {% for contact in site.data.catalog.social %}
-    <a href="{{contact.url}}" target="_blank" title="{{contact.title}}">
-      <img src="{{contact.icon}}" alt="{{contact.title}}" />
-    </a>
-    {% endfor %}
+    {% include about/social.html %}
   </div>
 </footer>
