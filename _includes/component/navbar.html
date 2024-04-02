@@ -1,9 +1,6 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="{{ site.baseurl }}">
-      {% include svg/dark_logo.svg %} 
-      ixicale
-    </a>
+    <a class="navbar-item" href="{{ site.baseurl }}"> {% include svg/dark_logo.svg %} </a>
     <a data-target="navMenu" class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -14,11 +11,11 @@
 
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item"> Home </a>
+      <a class="navbar-item" href="#background">ixicale</a>
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item has-dropdown is-hoverable">
+      <div class="navbar-item has-dropdown is-right">
         <a class="navbar-link">
           <span class="icon is-small">
             <i class="fas fa-lg fa-sun" id="currentTheme" aria-hidden="true"></i>

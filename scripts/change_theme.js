@@ -3,6 +3,7 @@ $(function () {
   const hrs = d.getHours();
   const isNight = hrs > 18 || hrs < 6; // between 6pm and 6am
 
+  console.log("change_theme.js loaded");
   const qsHtml = document.querySelector("html");
   const elCurrentTheme = document.getElementById("currentTheme");
   const elSunTheme = document.getElementById("themeSun");
