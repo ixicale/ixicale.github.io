@@ -11,6 +11,13 @@ social:
     url: mailto:ixicaleescalante@gmail.com
 keywords: fullstack, web, python, xicale, isaias, ixicale, software, engineer, developer, javascript, golang, aws, latam
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - assets/css
+
 # Build settings
 markdown: kramdown
 
@@ -22,6 +29,10 @@ exclude:
   - 'node_modules'
   - 'build'
   - 'package.json'
+  - 'package-lock.json'
+  - 'LICENSE'
+  - 'local.sh'
+  - 'Dockerfile'
 
 keep_files:
   - 'CNAME'

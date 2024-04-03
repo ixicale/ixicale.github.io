@@ -1,0 +1,26 @@
+<section class="section has-text-centered is-medium ixicale is-info" id="ixicale">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths">
+        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Hi, I'm Xicale. Nice to meet you</h1>
+
+        <div class="columns is-mobile is-centered">
+          {% for contact in site.data.catalog.social %}
+          <div class="column is-narrow p-1">
+            <a href="{{contact.url}}" title="{{contact.title}}">
+              <figure class="image is-24x24">
+                <img src="{{contact.icon}}" alt="{{contact.title}}" />
+              </figure>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <h2 class="subtitle is-size-5-desktop has-text-weight-normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas adipisci aut soluta reprehenderit,
+          reiciendis voluptatum, autem similique blanditiis incidunt tempore omnis neque at. Quas natus fugiat
+          doloremque, error ea tenetur.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>

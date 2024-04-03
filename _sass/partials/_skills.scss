@@ -1,0 +1,12 @@
+.skills {
+    margin-top: -10rem;
+    padding-bottom: 1rem;
+
+    .column.is-4 {
+        padding:  3rem 1rem;
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid;
+        }
+
+    }
+}

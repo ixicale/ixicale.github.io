@@ -1,0 +1,14 @@
+.ixicale {
+    &.is-primary {
+        background-color: var(--bulma-primary-soft);
+        .subtitle, .title {
+            color: var(--bulma-primary-bold);
+        }
+    }
+    &.is-info {
+        background-color: var(--bulma-info-soft);
+        .subtitle, .title {
+            color: var(--bulma-info-bold);
+        }
+    }
+}

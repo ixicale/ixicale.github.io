@@ -12,6 +12,7 @@ RUN gem install bundler
 # Replace '4.2.0' with the version you need, or remove the version specification to install the latest version
 RUN gem install jekyll -v '4.2.0' 
 RUN gem install webrick
+RUN gem install sassc
 # Make port 4000 available to the world outside this container
 EXPOSE 4000
 # Define environment variable

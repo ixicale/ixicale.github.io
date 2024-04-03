@@ -1,18 +1,18 @@
-<section class="section">
-  <div class="card">
-    <div class="card-content">
-      <div class="content">
-        <div class="columns is-centered is-multiline">
+<section class="section skills">
+  <div class="container is-narrow">
+    <div class="box">
+      <div class="content py-4 has-text-centered">
+        <div class="columns is-multiline">
           {% for section in site.data.skills.sections %}
           <div class="column is-4">
             <p class="title is-6 has-text-primary">{{section.name}}</p>
-            <hr />
-            <div class="tags are-medium">
+            <div class="tags are-medium is-centered">
               {% for item in site.data.skills[section.items] %}
               <div class="tag is-hoverable is-rounded">
-                <figure class="image is-16x16">
-                  <img class="has-ratio" src="{{site.baseurl}}{{item.icon}}" />
+                <figure class="image is-24x24">
+                  <img class="has-ratio" src="{{item.icon}}" />
                 </figure>
+                &nbsp;
                 {{item.name}}
               </div>
               {% endfor %}
