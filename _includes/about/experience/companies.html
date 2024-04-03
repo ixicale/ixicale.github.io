@@ -1,0 +1,36 @@
+<section class="section upper companies">
+  <div class="container is-narrow">
+    <div class="content py-4 has-text-centered">
+      <div class="columns is-tablet is-centered is-multiline">
+        {% for xp in site.data.experience %}
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image has-background-white-ter">
+              <figure class="image is-2by1">
+                <img src="{{ xp.logo }}" alt="Placeholder image" />
+              </figure>
+            </div>
+
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">{{xp.company}}</p>
+                  <p class="subtitle is-6">{{xp.position}}</p>
+                </div>
+              </div> 
+              <div class="content">
+                {{xp.details}}
+                <br />
+                <time>{{xp.time}}</time>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal -->
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

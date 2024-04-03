@@ -1,27 +1,159 @@
 - company: Stori Card
+  target: stori-card
   time: 2022/dic - present
   position: Sr fullstack developer
   url: https://storicard.com
-  logo: /assets/images/company/default.png
-  details: lorem ipsum
+  logo: /assets/images/company/stori-card.png
+  projects:
+    - title: Deposits application process 
+      details: Web site to sign up and make deposits for the stori card
+      techs:
+        - name: Vue.js
+          icon: /assets/images/vue-js.png
+    - title: Deposits beneficiary
+      details: Web site to set up beneficiaries for the customer from deposits
+      techs:
+        - name: Vue.js
+          icon: /assets/images/vue-js.png
+    - title: App process - sign up API
+      details: APIs to manage the process of the application process web site
+      techs:
+        - name: Go
+          icon: /assets/images/golang.png
+        - name: Docker
+          icon: /assets/images/docker.png
+        - name: aws
+          icon: /assets/images/amazon-web-services.png
+        - name: postgresql
+          icon: /assets/images/postgresql.png
+    - title: App process - core banking API
+      details: Service to manage the core banking process of the beneficiary web site and transactions from the deposits
+      techs:
+        - name: Go
+          icon: /assets/images/golang.png
+        - name: Docker
+          icon: /assets/images/docker.png
+        - name: aws
+          icon: /assets/images/amazon-web-services.png
+        - name: postgresql
+          icon: /assets/images/postgresql.png
+        - name: jenkins
+          icon: /assets/images/jenkins.png
+    - title: App process - KYC API
+      details: Service to manage the KYC process of the application process web site
+      techs:
+        - name: python
+          icon: /assets/images/python.png
+        - name: Docker
+          icon: /assets/images/docker.png
+        - name: aws
+          icon: /assets/images/amazon-web-services.png
+        - name: postgresql
+          icon: /assets/images/postgresql.png
+        - name: jenkins
+          icon: /assets/images/jenkins.png
+    - title: DB manager
+      details: Implementation about the database infrastructure and migrations to mitigate the data loss and improve the performance
+      techs:
+        - name: postgresql
+          icon: /assets/images/postgresql.png
+        - name: mongodb
+          icon: /assets/images/mongodb.png
+        - name: python
+          icon: /assets/images/python.png
+        - name: aws
+          icon: /assets/images/amazon-web-services.png
+        - name: jenkins
+          icon: /assets/images/jenkins.png
 
 - company: Cargamos
+  target: cargamos
   time: 2021/may - 2022/dic
   position: Sr Backend Developer
   url: https://www.cargamos.com
-  logo: /assets/images/company/default.png
-  details: lorem ipsum
+  logo: /assets/images/company/cargamos.png
+  projects:
+    - title: Exchange Management System
+      details: System to authenticate users' pickups. Implements OTP for real-time passwords and catch information from user who is doing the pickup at warehouse
+      techs:
+        - name: python
+          icon: /assets/images/python.png
+        - name: mongodb
+          icon: /assets/images/mongodb.png
+        - name: GCP
+          icon: /assets/images/google-cloud-platform.png
+        - name: Kubernetes
+          icon: /assets/images/kubernetes.png
+        - name: Docker
+          icon: /assets/images/docker.png
+    - title: Delivery Management System Services
+      details: API project to tracking operations to know the owner custody. Each Operation goes from a warehouse to clients, the service is recording the time spent on for a shfit, route from the carguer package(s) pickups and tracking all states for this. Implements event source to know the state of the operation
+      techs:
+        - name: python
+          icon: /assets/images/python.png
+        - name: firebase
+          icon: /assets/images/firebase.png
+        - name: GCP
+          icon: /assets/images/google-cloud-platform.png
+        - name: Kubernetes  
+          icon: /assets/images/kubernetes.png
+    - title: Rates Management System Services
+      details: System to tracking any delivery from Cargamos and their users. Manage shifts, routes and operations by operator and simulate a payment
+      techs:
+        - name: python
+          icon: /assets/images/python.png
+        - name: postgresql
+          icon: /assets/images/postgresql.png
+        - name: GCP
+          icon: /assets/images/google-cloud-platform.png
+        - name: Kubernetes
+          icon: /assets/images/kubernetes.png
 
 - company: Palace Resorts
+  target: palace-resorts
   time: 2018/nov - 2021/may
   position: Full Stack Developer
   url: https://weddings.palaceresorts.com/es
-  logo: /assets/images/company/default.png
-  details: lorem ipsum
+  logo: /assets/images/company/palace-resorts.png
+  projects:
+    - title: Weddings
+      details: Web site to manage the weddings for the Palace Resorts. The site is a CMS to manage the weddings, the packages, the locations and the services
+      techs:
+        - name: React.js
+          icon: /assets/images/react-native.png
+        - name: Node.js
+          icon: /assets/images/nodejs.png
+        - name: AWS
+          icon: /assets/images/amazon-web-services.png
+    - title: Template Manager API
+      details: Web site to manage the templates for the Palace Resorts. The site is a CMS to manage the templates used to generate the weddings contracts and the emails
+      techs:
+        - name: Python
+          icon: /assets/images/python.png
+        - name: MySQL
+          icon: /assets/images/mysql.png
+        - name: AWS
+          icon: /assets/images/amazon-web-services.png
 
 - company: Ozelot Technologies
+  target: ozelot-technologies
   time: 2017/apr - 2018/nov
   position: Developer web and mobile
   url: https://ozelot.it
-  logo: /assets/images/company/default.png
-  details: lorem ipsum
+  logo: /assets/images/company/ozelot-technologies.png
+  projects:
+    - title: Remote Control
+      details: Service to manage devices from a web site or an app. The service is a REST API to manage IoT devices and the web site is a dashboard to manage and monitor the devices
+      techs:
+        - name: html5
+          icon: /assets/images/html-5.png
+        - name: css3
+          icon: /assets/images/css3.png
+        - name: javascript
+          icon: /assets/images/javascript.png
+        - name: python
+          icon: /assets/images/python.png
+        - name: Firebase
+          icon: /assets/images/firebase.png
+        - name: heroku
+          icon: /assets/images/heroku.png

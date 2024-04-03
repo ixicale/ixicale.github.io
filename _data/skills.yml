@@ -71,6 +71,10 @@ ManagementTools:
 CloudAndDeploymentServices:
   - name: AWS
     icon: /assets/images/amazon-web-services.png
+  - name: GCP
+    icon: /assets/images/google-cloud-platform.png
+  - name: Kubernetes
+    icon: /assets/images/kubernetes.png
   - name: Heroku
     icon: /assets/images/heroku.png
   - name: Netlify
@@ -106,8 +110,8 @@ sections:
     items: ManagementTools
   - name: Cloud & Deployment Services
     items: CloudAndDeploymentServices
-  # - name: Operating Systems
-  #   icon: https://img.icons8.com/color/48/000000/operating-system.png
+  # - name: Kubernetes
+  #   icon: https://img.icons8.com/color/48/000000/kubernetes.png
   #   sections:
   # - name: Languages
   #   icon: https://img.icons8.com/color/48/000000/language.png

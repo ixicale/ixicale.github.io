@@ -1,0 +1,32 @@
+<section class="section has-text-centered" id="social">
+  <div class="container">
+    <h1 class="title is-spaced has-text-weight-bold">Interested in collaborating with me?</h1>
+    <h2 class="subtitle is-size-5-desktop">
+      I'm always open to discussing product work or partnership opportunities.
+    </h2>
+
+    <div class="container">
+      <a href="mailto:{{site.author.email}}" class="button is-info is-rounded is-medium">
+        <span class="icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span>Start a conversation</span>
+      </a>
+    </div>
+
+    <h2 class="subtitle">Or find me on social media</h2>
+    <div class="columns is-mobile is-centered">
+      {% for contact in site.data.catalog.social %}
+      <div class="column is-narrow p-1">
+        <a href="{{contact.url}}" title="{{contact.title}}">
+          <figure class="image is-24x24">
+            <img src="{{contact.icon}}" alt="{{contact.title}}" />
+          </figure>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+</section>

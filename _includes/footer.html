@@ -7,6 +7,22 @@
       <span>Isaias Xicale</span>
       <span>2024</span>
     </div>
-    {% include about/social.html %}
+    {% for contact in site.data.catalog.social %}
+    <a href="{{contact.url}}" target="_blank" title="{{contact.title}}">
+      <img src="{{contact.icon}}" alt="{{contact.title}}" />
+    </a>
+    {% endfor %}
+    <div class="made-with-bulma">
+      <a href="https://bulma.io" target="_blank" title="Bulma">
+        <div class="top">
+          <span>Made with</span>
+        </div>
+        <div class="bottom" align="center">
+          <figure class="image is-128x128">
+            <img src="/assets/images/company/bulma.png" alt="Made with Bulma" width="128" height="24" />
+          </figure>
+        </div>
+      </a>
+    </div>
   </div>
 </footer>
