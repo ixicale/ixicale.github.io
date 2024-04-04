@@ -1,11 +1,48 @@
-@import 'partials/colors';
-@import 'partials/skills';
-@import 'partials/experience';
+@import "partials/colors";
+@import "partials/skills";
+@import "partials/experience";
 
 .upper {
-    margin-top: -10rem;
-    padding-bottom: 5rem;
+  margin-top: -10rem;
+  padding-bottom: 5rem;
 }
 .is-long {
-    padding-bottom: 14rem;
+  padding-bottom: 14rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bulma-warning-soft);
+  color: var(--bulma-warning-bold);
+  border-radius: 1rem;
+  cursor: pointer;
+  .toggle-button {
+    height: calc(100%);
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth transition for the toggle */
+    transform: translateX(-1rem);
+    i {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .toggle-icon {
+    &:first-child {
+      margin-left: 0.5rem;
+    }
+    &:last-child {
+      margin-right: 0.5rem;
+    }
+  }
+
+  /* Position the toggle button to the right for dark mode */
+  &.dark {
+    background-color: var(--bulma-info-soft);
+    color: var(--bulma-info-bold);
+    .toggle-button {
+      transform: translateX(1rem);
+    }
+  }
 }

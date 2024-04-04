@@ -2,38 +2,31 @@ $(function () {
   const d = new Date();
   const hrs = d.getHours();
   const isNight = hrs > 18 || hrs < 6; // between 6pm and 6am
-
-  console.log("change_theme.js loaded");
-  const qsHtml = document.querySelector("html");
-  const elCurrentTheme = document.getElementById("currentTheme");
-  const elSunTheme = document.getElementById("themeSun");
-  const elMoonTheme = document.getElementById("themeMoon");
-
-  const setDarkMode = () => {
-    elMoonTheme.classList.add("is-selected");
-    elSunTheme.classList.remove("is-selected");
-    qsHtml.classList.add("theme-dark");
-    elCurrentTheme.classList.remove("fa-sun");
-    elCurrentTheme.classList.add("fa-moon");
-  };
-  const setLightMode = () => {
-    elSunTheme.classList.add("is-selected");
-    elMoonTheme.classList.remove("is-selected");
-    qsHtml.classList.remove("theme-dark");
-    elCurrentTheme.classList.remove("fa-moon");
-    elCurrentTheme.classList.add("fa-sun");
-  };
-
-  if (isNight) {
-    setDarkMode();
+  const qsHTML = document.querySelector("html");
+  const qsToggle = document.querySelector(".theme-toggle");
+  const themeD = "theme-dark";
+  const themeL = "theme-light";
+  const stgTheme = localStorage.getItem("theme");
+  let theme = stgTheme || (isNight ? themeD : themeL);
+  if (theme === themeD) {
+    qsToggle.classList.toggle("dark");
   } else {
-    setLightMode();
+    qsHTML.classList.add(themeL);
   }
 
-  elSunTheme.addEventListener("click", () => {
-    setLightMode();
-  });
-  elMoonTheme.addEventListener("click", () => {
-    setDarkMode();
+  qsToggle.addEventListener("click", function () {
+    this.classList.toggle("dark");
+    let new_theme = themeD;
+    if (qsToggle.classList.contains("dark")) {
+      // Apply the dark theme
+      qsHTML.classList.add(themeD);
+      qsHTML.classList.remove(themeL);
+    } else {
+      // Apply the light theme
+      qsHTML.classList.add(themeL);
+      qsHTML.classList.remove(themeD);
+      new_theme = themeL;
+    }
+    localStorage.setItem("theme", new_theme);
   });
 });

@@ -1,4 +1,4 @@
-# ixicale.github.io
+# [ixicale.github.io](https://ixicale.github.io)
 
 This is the repository for my personal website. It is built using Jekyll and hosted on GitHub Pages.
 

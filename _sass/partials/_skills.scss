@@ -1,15 +1,14 @@
 .skills {
-    .column.is-4 {
-        padding:  2rem 1rem;
-        &:not(:nth-child(3n)) {
-            border-right: 1px solid;
-        }
-
+  .column.is-4 {
+    padding: 2rem 1rem;
+    &:not(:nth-child(3n)) {
+      border-right: 1px solid;
     }
+  }
 }
 // Styles less than desktop
 @media screen and (max-width: 768px) {
-    .skills .column.is-4:not(:nth-child(3n)) {
-            border-right: none;
-    }
+  .skills .column.is-4:not(:nth-child(3n)) {
+    border-right: none;
+  }
 }

@@ -1,6 +1,21 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ site.baseurl }}"> {% include svg/dark_logo.svg %} </a>
+    <div class="theme-toggle">
+      <span class="toggle-icon icon is-small">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+      </span>
+      <div class="toggle-button">
+        <!-- chevron up icon -->
+        <span class="icon is-small">
+          <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </span>
+      </div>
+      <span class="toggle-icon icon is-small">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+      </span>
+    </div>
+
     <a data-target="navMenu" class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -15,29 +30,6 @@
       <a class="navbar-item" href="#experience">experience</a>
     </div>
 
-    <div class="navbar-end">
-      <div class="navbar-item has-dropdown is-right">
-        <a class="navbar-link">
-          <span class="icon is-small">
-            <i class="fas fa-lg fa-sun" id="currentTheme" aria-hidden="true"></i>
-          </span>
-        </a>
-
-        <div class="navbar-dropdown is-right">
-          <a class="navbar-item" id="themeMoon">
-            <span class="icon is-small">
-              <i class="fas fa-moon" aria-hidden="true"></i>
-            </span>
-            <span>Dark theme</span>
-          </a>
-          <a class="navbar-item" id="themeSun">
-            <span class="icon is-small">
-              <i class="fas fa-sun" aria-hidden="true"></i>
-            </span>
-            <span>Light theme</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <div class="navbar-end"></div>
   </div>
 </nav>
