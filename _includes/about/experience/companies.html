@@ -17,17 +17,61 @@
                   <p class="title is-4">{{xp.company}}</p>
                   <p class="subtitle is-6">{{xp.position}}</p>
                 </div>
-              </div> 
+              </div>
               <div class="content">
                 {{xp.details}}
-                <br />
                 <time>{{xp.time}}</time>
               </div>
+            </div>
+            <!-- card footer -->
+            <div class="card-footer">
+              <a class="card-footer-item modal-open" data-target="{{xp.target}}"> What did I do? </a>
             </div>
           </div>
         </div>
 
         <!-- modal -->
+        <div class="modal" id="{{xp.target}}">
+          <div class="modal-background block-scroll"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title title is-3">{{xp.company}}</p>
+              <a class="is-color-text">
+                <span class="icon is-small">
+                  <i aria-hidden="true" class="fas fa-times"></i>
+                </span>
+              </a>
+            </header>
+            <section class="modal-card-body has-text-justified">
+              {% for project in xp.projects %}
+              <div class="content py-2 project">
+                <p class="js-typing-effect title is-4">{{project.title}}</p>
+                <p class="js-typing-effect subtitle">{{project.details}}</p>
+                <p class="js-typing-effect subtitle">Some of the technologies used:</p>
+                <div class="container columns is-multiline">
+                  <div class="tags are-normal">
+                    {% for item in project.techs %}
+                    <div class="js-typing-effect column is-narrow px-0">
+                      <div class="tag is-hoverable is-rounded">
+                        <figure class="image is-24x24">
+                          <img class="has-ratio" src="{{item.icon}}" />
+                        </figure>
+                        &nbsp; {{item.name}}
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </section>
+            <footer class="modal-card-foot">
+              <div class="buttons">
+                <button class="button is-success">Back</button>
+              </div>
+            </footer>
+          </div>
+        </div>
 
         {% endfor %}
       </div>

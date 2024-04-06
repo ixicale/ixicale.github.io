@@ -1,6 +1,31 @@
 .companies {
-    .card-image {
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-    } 
+  .card-image {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  // Define keyframes for the typing effect
+  @keyframes typing {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 100%;
+      white-space: normal; /* Allow wrapping after animation */
+    }
+  }
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+  }
+  // Apply typing effect to each paragraph or div inside modal-card-body
+  .js-typing-effect {
+    justify-content: flex-start !important;
+    white-space: nowrap; /* Ensures the text stays on one line */
+    overflow: hidden;
+    max-width: 0;
+    animation: typing 1s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  }
 }

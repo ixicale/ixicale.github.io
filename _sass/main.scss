@@ -10,6 +10,14 @@
   padding-bottom: 14rem;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bulma-text-strong) var(--bulma-body-background-color);
+}
+
+
 .theme-toggle {
   display: flex;
   align-items: center;
