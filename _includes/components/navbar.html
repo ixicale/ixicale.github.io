@@ -1,0 +1,39 @@
+<nav class="navbar is-fixed-top site-nav" aria-label="Main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item brand" href="{{ '/' | relative_url }}">
+        {% include components/logo.svg %}
+        <span class="brand-name">ixicale</span>
+      </a>
+
+      <div class="navbar-item is-hidden-desktop ml-auto px-1">
+        {% include components/theme-toggle.html %}
+      </div>
+
+      <button
+        type="button"
+        class="navbar-burger ml-0"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        data-target="nav-menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div id="nav-menu" class="navbar-menu">
+      <div class="navbar-end">
+        {% for link in site.data.content.nav %}
+        <a class="navbar-item" href="#{{ link.id }}">{{ link.title }}</a>
+        {% endfor %}
+        <div class="navbar-item is-hidden-touch">
+          {% include components/theme-toggle.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

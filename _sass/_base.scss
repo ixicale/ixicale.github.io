@@ -1,0 +1,77 @@
+// Page-wide rules.
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 1rem);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  background-color: var(--surface);
+}
+
+body {
+  background-color: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// Hidden until a keyboard user presses Tab.
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+
+  &:focus {
+    top: 0.75rem;
+  }
+}
+
+// Small label above titles.
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-section {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+
+  &.is-alt {
+    background-color: var(--surface-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

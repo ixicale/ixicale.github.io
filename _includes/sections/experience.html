@@ -1,0 +1,45 @@
+{%- assign text = site.data.content.experience -%}
+<section class="section site-section" id="{{ text.id }}" aria-labelledby="{{ text.id }}-title">
+  <div class="container is-max-desktop">
+    {% include components/section-header.html section=text %}
+
+    <ol class="timeline">
+      {% for job in site.data.experience %}
+      {%- comment -%} Collect each technology once, for the card summary. {%- endcomment -%}
+      {%- assign techs = "" | split: "" -%}
+      {%- for project in job.projects -%}
+        {%- for tech in project.techs -%}
+          {%- assign tech_names = techs | map: "name" | join: "|" | downcase | split: "|" -%}
+          {%- assign tech_name = tech.name | strip | downcase -%}
+          {%- unless tech_names contains tech_name -%}{%- assign techs = techs | push: tech -%}{%- endunless -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      <li class="timeline-item">
+        <article class="job-card">
+          <div class="job-logo">
+            <img src="{{ job.logo | relative_url }}" alt="{{ job.company }} logo" loading="lazy" decoding="async">
+          </div>
+          <div class="job-body">
+            <p class="job-time"><i class="fa-regular fa-calendar" aria-hidden="true"></i> <time>{{ job.time }}</time></p>
+            <h3 class="job-company">
+              {% if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
+            </h3>
+            <p class="job-position">{{ job.position }}</p>
+            <ul class="tech-list is-compact">
+              {% for item in techs %}{% include components/tech-tag.html item=item %}{% endfor %}
+            </ul>
+            <button type="button" class="button is-accent is-light is-small" data-modal-open="{{ job.target }}" aria-haspopup="dialog">
+              <span>{{ text.button }}</span>
+              <span class="icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  {% for job in site.data.experience %}
+  {% include components/job-modal.html job=job %}
+  {% endfor %}
+</section>

@@ -1,0 +1,15 @@
+.about-text {
+  max-width: 42rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.75;
+
+  p:first-child::first-letter {
+    float: left;
+    margin: 0.2rem 0.6rem 0 0;
+    color: var(--accent);
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 0.8;
+  }
+}

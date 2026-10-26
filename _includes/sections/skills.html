@@ -1,0 +1,18 @@
+{%- assign text = site.data.content.skills -%}
+<section class="section site-section is-alt" id="{{ text.id }}" aria-labelledby="{{ text.id }}-title">
+  <div class="container">
+    {% include components/section-header.html section=text %}
+    <div class="skills-grid">
+      {% for group in site.data.skills.sections %}
+      <article class="panel-card">
+        <h3 class="panel-card-title">{{ group.name }}</h3>
+        <ul class="tech-list">
+          {% for item in site.data.skills[group.items] %}
+          {% include components/tech-tag.html item=item %}
+          {% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

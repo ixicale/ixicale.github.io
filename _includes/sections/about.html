@@ -1,0 +1,11 @@
+{%- assign about = site.data.content.about -%}
+<section class="section site-section" id="{{ about.id }}" aria-labelledby="{{ about.id }}-title">
+  <div class="container is-max-desktop">
+    {% include components/section-header.html section=about %}
+    <div class="content about-text">
+      {% for paragraph in about.paragraphs %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

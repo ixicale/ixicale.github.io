@@ -1,44 +1,48 @@
+# -----------------------------------------------------------------------------
 # Site settings
+# Change the text of the page in _data/content.yml.
+# Change contact links in _data/social.yml.
+# -----------------------------------------------------------------------------
 name: Isaias Xicale
 title: Isaias Xicale | Sr Fullstack Developer
 description: Software engineer focused on building products for the web with passion for design and technology.
-url: https://ixicale.github.io/
+url: https://ixicale.github.io
 baseurl: ''
-email: ixicaleescalante@gmail.com
-logo: https://ixicale.github.io/assets/svg/light_logo_icon.svg
-social:
-  - title: email
-    url: mailto:ixicaleescalante@gmail.com
+lang: en
+locale: en_US
 keywords: fullstack, web, python, xicale, isaias, ixicale, software, engineer, developer, javascript, golang, aws, latam
+
+author:
+  name: Isaias Xicale
+  email: ixicaleescalante@gmail.com
+  job_title: Senior Fullstack Developer
+
+# Image for link previews (Open Graph / Twitter). 1200 x 630 px.
+cover: /assets/images/og-cover.png
+favicon: /assets/svg/dark_logo_icon.png
 
 sass:
   sass_dir: _sass
   style: compressed
 
-include:
-  - assets/css
-
 # Build settings
 markdown: kramdown
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
-  - 'Gemfile'
-  - 'Gemfile.lock'
+  - Gemfile
+  - Gemfile.lock
   - '*.gemspec'
-  - 'README.md'
-  - 'node_modules'
-  - 'build'
-  - 'package.json'
-  - 'package-lock.json'
-  - 'LICENSE'
-  - 'local.sh'
-  - 'Dockerfile'
+  - README.md
+  - node_modules
+  - build
+  - package.json
+  - package-lock.json
+  - LICENSE
+  - local.sh
+  - Dockerfile
 
 keep_files:
-  - 'CNAME'
-  - '.git'
-  - '.gitignore'
-
-plugins_dir:
-  - jekyll-minifier
-  - jekyll-sitemap
+  - CNAME

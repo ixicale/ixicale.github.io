@@ -1,0 +1,7 @@
+{% comment %}
+  One technology chip. Params: item (name, icon).
+{% endcomment %}
+<li class="tech-tag">
+  {% if include.item.icon %}<img src="{{ include.item.icon | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async">{% endif %}
+  <span>{{ include.item.name }}</span>
+</li>

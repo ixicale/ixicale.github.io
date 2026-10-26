@@ -1,0 +1,34 @@
+{% comment %}
+  Dialog with the projects of one job. Params: job (an entry of _data/experience.yml).
+{% endcomment %}
+{%- assign job = include.job -%}
+{%- assign text = site.data.content.experience -%}
+<div class="modal job-modal" id="{{ job.target }}" role="dialog" aria-modal="true" aria-labelledby="{{ job.target }}-title" hidden>
+  <div class="modal-background" data-modal-close></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        <p class="eyebrow">{{ job.position }} · {{ job.time }}</p>
+        <h3 class="title is-4" id="{{ job.target }}-title">{{ job.company }}</h3>
+      </div>
+      <button type="button" class="delete is-medium" aria-label="Close" data-modal-close></button>
+    </header>
+    <section class="modal-card-body">
+      <ol class="project-list">
+        {% for project in job.projects %}
+        <li class="project-item" style="--i: {{ forloop.index0 }}">
+          <h4 class="project-title">{{ project.title }}</h4>
+          <p class="project-details">{{ project.details }}</p>
+          <p class="project-label">{{ text.modal_techs }}:</p>
+          <ul class="tech-list is-compact">
+            {% for item in project.techs %}{% include components/tech-tag.html item=item %}{% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+    <footer class="modal-card-foot">
+      <button type="button" class="button is-accent" data-modal-close>Back</button>
+    </footer>
+  </div>
+</div>

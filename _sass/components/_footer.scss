@@ -1,0 +1,36 @@
+.site-footer {
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid var(--line);
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.made-with {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--logo-plate);
+  color: hsl(221, 10%, 35%);
+  font-size: 0.8rem;
+
+  img {
+    width: auto;
+    height: 1.1rem;
+  }
+}

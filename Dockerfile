@@ -13,6 +13,7 @@ RUN gem install bundler
 RUN gem install jekyll -v '4.2.0' 
 RUN gem install webrick
 RUN gem install sassc
+RUN gem install jekyll-sitemap
 # Make port 4000 available to the world outside this container
 EXPOSE 4000
 # Define environment variable

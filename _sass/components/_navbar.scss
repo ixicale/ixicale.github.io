@@ -1,0 +1,57 @@
+.site-nav {
+  border-bottom: 1px solid var(--line);
+  background-color: var(--nav-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+
+  .navbar-brand,
+  .navbar-item,
+  .navbar-burger {
+    background-color: transparent;
+    color: var(--bulma-text-strong);
+  }
+
+  .navbar-burger {
+    border: 0;
+    background: transparent;
+  }
+
+  .navbar-end > a.navbar-item {
+    font-weight: 500;
+    background: transparent;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--accent);
+    }
+  }
+
+  .brand {
+    gap: 0.6rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .navbar-menu {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+  }
+}
+
+// Logo SVG: colors follow the theme.
+.logo {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+
+  .logo-bg {
+    fill: var(--bulma-text-strong);
+  }
+
+  .logo-fg {
+    fill: var(--surface);
+  }
+}

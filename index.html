@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-
-<div id="site" class="">
-  {% include about/intro.html %}
-  {% include about/ixicale.html %}
-  {% include about/experience.html %}
-</div>
+{% comment %}
+  Page sections, in order. Each section lives in _includes/sections/.
+  To hide a section, delete its line. To move it, move the line.
+{% endcomment %}
+{% include sections/hero.html %}
+{% include sections/about.html %}
+{% include sections/skills.html %}
+{% include sections/experience.html %}
+{% include sections/projects.html %}
+{% include sections/contact.html %}

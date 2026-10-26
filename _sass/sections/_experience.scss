@@ -1,0 +1,121 @@
+// Vertical timeline of jobs.
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // The line.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.45rem;
+    width: 2px;
+    background: linear-gradient(var(--accent), var(--line));
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.25rem;
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+
+  // The dot.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.75rem;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid var(--surface);
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+}
+
+.job-card {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+
+  &:hover {
+    border-color: var(--accent-soft);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .tech-list {
+    margin-bottom: 1rem;
+  }
+}
+
+// Logos are dark on transparent, so they sit on a light plate in both themes.
+.job-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--logo-plate);
+
+  img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.job-time {
+  margin-bottom: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.job-company {
+  margin-bottom: 0.1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  a {
+    color: var(--bulma-text-strong);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.job-position {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px) {
+  .job-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .job-logo {
+    aspect-ratio: auto;
+    height: 5rem;
+  }
+}

@@ -22,9 +22,9 @@
           icon: /assets/images/golang.png
         - name: Docker
           icon: /assets/images/docker.png
-        - name: aws
+        - name: AWS
           icon: /assets/images/amazon-web-services.png
-        - name: postgresql
+        - name: PostgreSQL
           icon: /assets/images/postgresql.png
     - title: App process - core banking API
       details: Service to manage the core banking process of the beneficiary web site and transactions from the deposits
@@ -33,37 +33,37 @@
           icon: /assets/images/golang.png
         - name: Docker
           icon: /assets/images/docker.png
-        - name: aws
+        - name: AWS
           icon: /assets/images/amazon-web-services.png
-        - name: postgresql
+        - name: PostgreSQL
           icon: /assets/images/postgresql.png
-        - name: jenkins
+        - name: Jenkins
           icon: /assets/images/jenkins.png
     - title: App process - KYC API
       details: Service to manage the KYC process of the application process web site
       techs:
-        - name: python
+        - name: Python
           icon: /assets/images/python.png
         - name: Docker
           icon: /assets/images/docker.png
-        - name: aws
+        - name: AWS
           icon: /assets/images/amazon-web-services.png
-        - name: postgresql
+        - name: PostgreSQL
           icon: /assets/images/postgresql.png
-        - name: jenkins
+        - name: Jenkins
           icon: /assets/images/jenkins.png
     - title: DB manager
       details: Implementation about the database infrastructure and migrations to mitigate the data loss and improve the performance
       techs:
-        - name: postgresql
+        - name: PostgreSQL
           icon: /assets/images/postgresql.png
-        - name: mongodb
+        - name: MongoDB
           icon: /assets/images/mongodb.png
-        - name: python
+        - name: Python
           icon: /assets/images/python.png
-        - name: aws
+        - name: AWS
           icon: /assets/images/amazon-web-services.png
-        - name: jenkins
+        - name: Jenkins
           icon: /assets/images/jenkins.png
 
 - company: Cargamos
@@ -76,9 +76,9 @@
     - title: Exchange Management System
       details: System to authenticate users' pickups. Implements OTP for real-time passwords and catch information from user who is doing the pickup at warehouse
       techs:
-        - name: python
+        - name: Python
           icon: /assets/images/python.png
-        - name: mongodb
+        - name: MongoDB
           icon: /assets/images/mongodb.png
         - name: GCP
           icon: /assets/images/google-cloud-platform.png
@@ -89,20 +89,20 @@
     - title: Delivery Management System Services
       details: API project to tracking operations to know the owner custody. Each Operation goes from a warehouse to clients, the service is recording the time spent on for a shfit, route from the carguer package(s) pickups and tracking all states for this. Implements event source to know the state of the operation
       techs:
-        - name: python
+        - name: Python
           icon: /assets/images/python.png
-        - name: firebase
+        - name: Firebase
           icon: /assets/images/firebase.png
         - name: GCP
           icon: /assets/images/google-cloud-platform.png
-        - name: Kubernetes  
+        - name: Kubernetes
           icon: /assets/images/kubernetes.png
     - title: Rates Management System Services
       details: System to tracking any delivery from Cargamos and their users. Manage shifts, routes and operations by operator and simulate a payment
       techs:
-        - name: python
+        - name: Python
           icon: /assets/images/python.png
-        - name: postgresql
+        - name: PostgreSQL
           icon: /assets/images/postgresql.png
         - name: GCP
           icon: /assets/images/google-cloud-platform.png
@@ -145,15 +145,15 @@
     - title: Remote Control
       details: Service to manage devices from a web site or an app. The service is a REST API to manage IoT devices and the web site is a dashboard to manage and monitor the devices
       techs:
-        - name: html5
+        - name: HTML5
           icon: /assets/images/html-5.png
-        - name: css3
+        - name: CSS3
           icon: /assets/images/css3.png
-        - name: javascript
+        - name: JavaScript
           icon: /assets/images/javascript.png
-        - name: python
+        - name: Python
           icon: /assets/images/python.png
         - name: Firebase
           icon: /assets/images/firebase.png
-        - name: heroku
+        - name: Heroku
           icon: /assets/images/heroku.png

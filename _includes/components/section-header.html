@@ -1,0 +1,10 @@
+{% comment %}
+  Section title block.
+  Params: section (an entry of _data/content.yml with eyebrow, title, subtitle).
+{% endcomment %}
+{%- assign s = include.section -%}
+<header class="section-header">
+  {% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}
+  <h2 class="title is-3 is-size-4-mobile" id="{{ s.id }}-title">{{ s.title }}</h2>
+  {% if s.subtitle %}<p class="subtitle is-6">{{ s.subtitle }}</p>{% endif %}
+</header>
