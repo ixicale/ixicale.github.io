@@ -25,7 +25,9 @@ hero:
     - Hey! Xicale's here 👋
     - 5+ years of coding experience
     - Always learning new things
+  # Two versions: one for the light theme (white background), one for the dark theme.
   image: /assets/gifs/intro.gif
+  image_dark: /assets/gifs/intro-dark.gif
   image_alt: Illustration of a computer, a phone and charts
   primary_button: Start a conversation
   secondary_button: See my experience

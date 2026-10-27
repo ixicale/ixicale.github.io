@@ -6,8 +6,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: -20%;
-    right: -10%;
+    top: -30%;
+    left: -20%;
     width: 60vw;
     height: 60vw;
     border-radius: 50%;
@@ -64,22 +64,25 @@
 }
 
 .hero-buttons {
+  justify-content: flex-start; // Bulma centers buttons inside a hero.
   margin-bottom: 1.5rem !important;
 }
 
+// The GIF has the page color as its background, so it has no frame.
+// Light theme: white background. Dark theme: intro-dark.gif.
 .hero-media {
-  margin: 0;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: #fff; // The GIF has a white background.
-  box-shadow: var(--shadow-hover);
+  width: 100%;
+  aspect-ratio: 640 / 456;
+  background: var(--hero-image) center / contain no-repeat;
+}
 
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
+[data-theme="dark"] .hero-media {
+  background-image: var(--hero-image-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-media {
+    background-image: var(--hero-image-dark);
   }
 }
 

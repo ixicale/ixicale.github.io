@@ -28,9 +28,15 @@
         </div>
 
         <div class="column is-5-desktop">
-          <figure class="hero-media">
-            <img src="{{ hero.image | relative_url }}" alt="{{ hero.image_alt }}" width="640" height="456" fetchpriority="high">
-          </figure>
+          {%- comment -%}
+            Background images, so the browser loads only the GIF for the current theme.
+          {%- endcomment -%}
+          <div
+            class="hero-media"
+            role="img"
+            aria-label="{{ hero.image_alt }}"
+            style="--hero-image: url('{{ hero.image | relative_url }}'); --hero-image-dark: url('{{ hero.image_dark | relative_url }}');"
+          ></div>
         </div>
       </div>
     </div>
