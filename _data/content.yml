@@ -72,3 +72,6 @@ contact:
 footer:
   credit: Designed & Developed by
   made_with: Made with
+  # Shows only when the visitor counter is on. The count goes after "visits".
+  visits_thanks: Thanks for the visit, see you soon!
+  visits_label: visits so far

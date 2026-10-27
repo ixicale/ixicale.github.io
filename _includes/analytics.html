@@ -2,7 +2,23 @@
   GoatCounter visitor counter. No cookies and no personal data.
   It loads only on the live site (GitHub Pages builds with JEKYLL_ENV=production)
   and only when "goatcounter" in _config.yml has a code.
+  The footer count needs "Allow adding visitor counts on your website"
+  in GoatCounter > Settings. If it is off, the footer shows only the thanks text.
 {%- endcomment -%}
 {%- if site.goatcounter != '' and site.goatcounter and jekyll.environment == 'production' -%}
 <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+  (function () {
+    var box = document.querySelector("[data-visit-count]");
+    if (!box || !window.fetch) return;
+    fetch("https://{{ site.goatcounter }}.goatcounter.com/counter/TOTAL.json")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data || !data.count) return;
+        box.querySelector("strong").textContent = data.count;
+        box.hidden = false;
+      })
+      .catch(function () {});
+  })();
+</script>
 {%- endif -%}

@@ -11,5 +11,13 @@
         <img src="{{ '/assets/images/company/bulma.png' | relative_url }}" alt="Bulma" width="96" height="24" loading="lazy">
       </a>
     </div>
+    {%- if site.goatcounter != '' and site.goatcounter %}
+    <p class="site-footer-visits">
+      <span>{{ text.visits_thanks }} 👋</span>
+      <span class="site-footer-visits-count" data-visit-count hidden>
+        · <strong>0</strong> {{ text.visits_label }}
+      </span>
+    </p>
+    {%- endif %}
   </div>
 </footer>
