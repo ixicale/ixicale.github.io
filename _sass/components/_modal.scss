@@ -37,6 +37,7 @@
 
   .modal-card-foot {
     justify-content: flex-end;
+    gap: 0.5rem;
   }
 
   .modal-card-body {
@@ -54,8 +55,7 @@
   position: relative;
   padding: 0 0 1.5rem 1.5rem;
   border-left: 2px solid var(--line);
-  animation: fade-up 0.4s var(--ease) both;
-  animation-delay: calc(var(--i, 0) * 80ms);
+  transition: opacity 0.3s var(--ease);
 
   &:last-child {
     padding-bottom: 0.25rem;
@@ -93,6 +93,58 @@
   font-size: 0.8rem;
 }
 
+// Typing effect (assets/js/dialog-typing.js).
+// The full text stays in the layout, but the part not yet typed is invisible.
+// So long sentences wrap in their final place and the text does not jump.
+.typing-rest {
+  visibility: hidden;
+}
+
+// Plain inline box with zero net width (border 2px, margin -2px).
+// So the caret never changes where a line wraps.
+.typing-caret {
+  margin-right: -2px;
+  border-left: 2px solid var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+// Screen readers read the full text at once.
+.typing-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.project-item {
+  // Not started yet: show a dim dot only.
+  &.is-pending {
+    opacity: 0.35;
+  }
+
+  &.is-pending,
+  &.is-typing {
+    [data-type-reveal] {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+  }
+
+  [data-type-reveal] {
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  }
+
+  &.is-typing::before {
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+}
+
+.typing-skip[hidden] {
+  display: none;
+}
+
 @keyframes modal-in {
   from {
     opacity: 0;
@@ -100,9 +152,3 @@
   }
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-}

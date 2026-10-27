@@ -13,14 +13,14 @@
       </div>
       <button type="button" class="delete is-medium" aria-label="Close" data-modal-close></button>
     </header>
-    <section class="modal-card-body">
+    <section class="modal-card-body" data-typing-dialog>
       <ol class="project-list">
         {% for project in job.projects %}
-        <li class="project-item" style="--i: {{ forloop.index0 }}">
-          <h4 class="project-title">{{ project.title }}</h4>
-          <p class="project-details">{{ project.details }}</p>
-          <p class="project-label">{{ text.modal_techs }}:</p>
-          <ul class="tech-list is-compact">
+        <li class="project-item" data-typing-item>
+          <h4 class="project-title" data-type>{{ project.title }}</h4>
+          <p class="project-details" data-type>{{ project.details }}</p>
+          <p class="project-label" data-type-reveal>{{ text.modal_techs }}:</p>
+          <ul class="tech-list is-compact" data-type-reveal>
             {% for item in project.techs %}{% include components/tech-tag.html item=item %}{% endfor %}
           </ul>
         </li>
@@ -28,6 +28,7 @@
       </ol>
     </section>
     <footer class="modal-card-foot">
+      <button type="button" class="button is-ghost-outline is-small typing-skip" data-typing-skip>Show all</button>
       <button type="button" class="button is-accent" data-modal-close>Back</button>
     </footer>
   </div>

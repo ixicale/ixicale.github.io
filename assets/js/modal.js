@@ -1,5 +1,6 @@
 // Experience dialogs: open with [data-modal-open="id"], close with
 // [data-modal-close], the Escape key, or a click on the background.
+// Sends "modal:open" and "modal:close" events on the modal element.
 (function () {
   var root = document.documentElement;
   var lastTrigger = null;
@@ -12,12 +13,14 @@
     root.classList.add("is-clipped");
     var first = modal.querySelector("[data-modal-close]:not(.modal-background)");
     if (first) first.focus();
+    modal.dispatchEvent(new CustomEvent("modal:open"));
   }
 
   function close(modal) {
     modal.classList.remove("is-active");
     modal.hidden = true;
     root.classList.remove("is-clipped");
+    modal.dispatchEvent(new CustomEvent("modal:close"));
     if (lastTrigger) lastTrigger.focus();
     lastTrigger = null;
   }

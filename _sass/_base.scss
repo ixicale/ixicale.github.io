@@ -65,6 +65,13 @@ body {
   }
 }
 
+// Blinking text caret (hero and dialogs).
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
