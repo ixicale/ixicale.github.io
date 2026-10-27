@@ -7,6 +7,7 @@
 <meta name="description" content="{{ page_description }}">
 <meta name="keywords" content="{{ site.keywords }}">
 <meta name="author" content="{{ site.author.name }}">
+<meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
 <link rel="canonical" href="{{ canonical }}">
 
 <!-- Link previews -->
@@ -47,16 +48,56 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-<!-- Structured data for search engines -->
+<!-- Structured data for search engines (schema.org). -->
+{%- assign current_job = site.data.experience | first -%}
+{%- assign skill_names = "" | split: "" -%}
+{%- for section in site.data.skills.sections -%}
+  {%- assign names = site.data.skills[section.items] | map: "name" -%}
+  {%- assign skill_names = skill_names | concat: names -%}
+{%- endfor -%}
+{%- assign same_as = site.data.social | where_exp: "link", "link.url contains 'https://'" | map: "url" -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": {{ site.author.name | jsonify }},
-  "jobTitle": {{ site.author.job_title | jsonify }},
-  "email": {{ site.author.email | prepend: 'mailto:' | jsonify }},
-  "url": {{ site.url | jsonify }},
-  "image": {{ site.cover | absolute_url | jsonify }},
-  "sameAs": {{ site.data.social | where_exp: "link", "link.url contains 'https://'" | map: "url" | jsonify }}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ '/#website' | absolute_url | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "name": {{ site.name | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.lang | jsonify }},
+      "publisher": { "@id": {{ '/#person' | absolute_url | jsonify }} }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": {{ canonical | append: '#page' | jsonify }},
+      "url": {{ canonical | jsonify }},
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "isPartOf": { "@id": {{ '/#website' | absolute_url | jsonify }} },
+      "mainEntity": { "@id": {{ '/#person' | absolute_url | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ '/#person' | absolute_url | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "jobTitle": {{ site.author.job_title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "image": {{ site.cover | absolute_url | jsonify }},
+      "email": {{ site.author.email | prepend: 'mailto:' | jsonify }},
+      {%- if current_job %}
+      "worksFor": {
+        "@type": "Organization",
+        "name": {{ current_job.company | jsonify }},
+        "url": {{ current_job.url | jsonify }}
+      },
+      {%- endif %}
+      "knowsAbout": {{ skill_names | uniq | jsonify }},
+      "knowsLanguage": {{ site.data.skills.Languages | map: "name" | jsonify }},
+      "sameAs": {{ same_as | jsonify }}
+    }
+  ]
 }
 </script>

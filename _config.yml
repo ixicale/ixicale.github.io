@@ -21,6 +21,12 @@ author:
 cover: /assets/images/og-cover.png
 favicon: /assets/svg/dark_logo_icon.png
 
+# Visitor counter (GoatCounter: no cookies, no personal data).
+# 1. Make a free account at https://www.goatcounter.com/signup
+# 2. Put your site code here. Example: code "ixicale" -> ixicale.goatcounter.com
+# Leave it empty to turn the counter off. It only runs on the live site.
+goatcounter: ''
+
 sass:
   sass_dir: _sass
   style: compressed

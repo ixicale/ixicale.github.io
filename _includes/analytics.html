@@ -1,0 +1,8 @@
+{%- comment -%}
+  GoatCounter visitor counter. No cookies and no personal data.
+  It loads only on the live site (GitHub Pages builds with JEKYLL_ENV=production)
+  and only when "goatcounter" in _config.yml has a code.
+{%- endcomment -%}
+{%- if site.goatcounter != '' and site.goatcounter and jekyll.environment == 'production' -%}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{%- endif -%}
