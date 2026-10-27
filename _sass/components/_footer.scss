@@ -34,3 +34,15 @@
     height: 1.1rem;
   }
 }
+
+.site-footer-visits {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--line);
+  text-align: center;
+  font-size: 0.85rem;
+
+  strong {
+    color: var(--accent-soft-text);
+  }
+}
