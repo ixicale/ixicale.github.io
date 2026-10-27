@@ -1,0 +1,42 @@
+// Section header (eyebrow, title, subtitle).
+.section-header {
+  max-width: 40rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+
+  .title {
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+  }
+}
+
+// Plain card with a border. Used by skills and projects.
+.panel-card {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-soft);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.panel-card-title {
+  margin-bottom: 1rem;
+  color: var(--bulma-text-strong);
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  &.is-large {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+}

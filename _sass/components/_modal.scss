@@ -1,0 +1,154 @@
+// Experience dialog (Bulma modal with brand styles).
+.job-modal {
+  .modal-background {
+    background-color: hsla(221, 30%, 8%, 0.6);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-card {
+    max-width: 44rem;
+    width: calc(100% - 2rem);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-hover);
+    animation: modal-in 0.3s var(--ease);
+  }
+
+  .modal-card-head,
+  .modal-card-foot {
+    border-color: var(--line);
+    background: var(--surface-raised);
+  }
+
+  .modal-card-head {
+    align-items: flex-start;
+    gap: 1rem;
+
+    .eyebrow {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  // Bulma does not let the title shrink. Long titles then push the card wider.
+  .modal-card-title {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .modal-card-foot {
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .modal-card-body {
+    background: var(--surface);
+  }
+}
+
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-item {
+  position: relative;
+  padding: 0 0 1.5rem 1.5rem;
+  border-left: 2px solid var(--line);
+  transition: opacity 0.3s var(--ease);
+
+  &:last-child {
+    padding-bottom: 0.25rem;
+  }
+
+  // Dot on the line.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.35rem;
+    left: -0.4rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 2px solid var(--surface);
+    border-radius: 50%;
+    background: var(--accent);
+  }
+}
+
+.project-title {
+  margin-bottom: 0.25rem;
+  color: var(--bulma-text-strong);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.project-details {
+  margin-bottom: 0.75rem;
+  color: var(--bulma-text);
+}
+
+.project-label {
+  margin-bottom: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+// Typing effect (assets/js/dialog-typing.js).
+// The full text stays in the layout, but the part not yet typed is invisible.
+// So long sentences wrap in their final place and the text does not jump.
+.typing-rest {
+  visibility: hidden;
+}
+
+// Plain inline box with zero net width (border 2px, margin -2px).
+// So the caret never changes where a line wraps.
+.typing-caret {
+  margin-right: -2px;
+  border-left: 2px solid var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+// Screen readers read the full text at once.
+.typing-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.project-item {
+  // Not started yet: show a dim dot only.
+  &.is-pending {
+    opacity: 0.35;
+  }
+
+  &.is-pending,
+  &.is-typing {
+    [data-type-reveal] {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+  }
+
+  [data-type-reveal] {
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  }
+
+  &.is-typing::before {
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+}
+
+.typing-skip[hidden] {
+  display: none;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+

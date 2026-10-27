@@ -1,0 +1,44 @@
+{%- assign hero = site.data.content.hero -%}
+<section class="hero is-fullheight-with-navbar site-hero" aria-labelledby="hero-title">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered is-variable is-8">
+        <div class="column is-7-desktop">
+          <p class="eyebrow">{{ site.author.name }}</p>
+          <h1 class="title hero-title" id="hero-title">{{ hero.title }}</h1>
+          <p class="subtitle hero-subtitle">{{ hero.subtitle }}</p>
+
+          <p class="hero-rotating" aria-live="off">
+            <span class="hero-prompt" aria-hidden="true">&gt;</span>
+            <span data-typing="{{ hero.rotating | jsonify | escape }}">{{ hero.rotating | first }}</span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <div class="buttons hero-buttons">
+            <a class="button is-accent is-medium" href="mailto:{{ site.author.email }}">
+              <span class="icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+              <span>{{ hero.primary_button }}</span>
+            </a>
+            <a class="button is-ghost-outline is-medium" href="#experience">
+              <span>{{ hero.secondary_button }}</span>
+              <span class="icon" aria-hidden="true"><i class="fa-solid fa-arrow-down"></i></span>
+            </a>
+          </div>
+
+          {% include components/social-links.html class="is-large" %}
+        </div>
+
+        <div class="column is-5-desktop">
+          {%- comment -%}
+            Background images, so the browser loads only the GIF for the current theme.
+          {%- endcomment -%}
+          <div
+            class="hero-media"
+            role="img"
+            aria-label="{{ hero.image_alt }}"
+            style="--hero-image: url('{{ hero.image | relative_url }}'); --hero-image-dark: url('{{ hero.image_dark | relative_url }}');"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

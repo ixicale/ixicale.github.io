@@ -1,0 +1,98 @@
+.site-hero {
+  position: relative;
+  overflow: hidden;
+
+  // Soft brand glow behind the hero.
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-body {
+    position: relative;
+  }
+}
+
+.hero-title {
+  margin-bottom: 1rem !important;
+  font-size: unquote("clamp(2.25rem, 4vw + 1rem, 4rem)");
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.hero-subtitle {
+  max-width: 34rem;
+  margin-bottom: 1.25rem !important;
+  color: var(--text-muted);
+  font-size: unquote("clamp(1.1rem, 1vw + 0.8rem, 1.35rem)");
+}
+
+.hero-rotating {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  margin-bottom: 2rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  color: var(--bulma-text-strong);
+  font-family: var(--bulma-family-code);
+  font-size: 0.95rem;
+
+  .hero-prompt {
+    margin-right: 0.5rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .caret {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    margin-left: 2px;
+    background: var(--accent);
+    animation: blink 1s step-end infinite;
+  }
+}
+
+.hero-buttons {
+  justify-content: flex-start; // Bulma centers buttons inside a hero.
+  margin-bottom: 1.5rem !important;
+}
+
+// The GIF has the page color as its background, so it has no frame.
+// Light theme: white background. Dark theme: intro-dark.gif.
+.hero-media {
+  width: 100%;
+  aspect-ratio: 640 / 456;
+  background: var(--hero-image) center / contain no-repeat;
+}
+
+[data-theme="dark"] .hero-media {
+  background-image: var(--hero-image-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-media {
+    background-image: var(--hero-image-dark);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-hero .hero-body {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-buttons .button {
+    flex: 1 1 100%;
+  }
+}

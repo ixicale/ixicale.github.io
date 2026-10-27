@@ -1,0 +1,14 @@
+{%- assign text = site.data.content.contact -%}
+<section class="section site-section" id="{{ text.id }}" aria-labelledby="{{ text.id }}-title">
+  <div class="container is-max-desktop">
+    <div class="contact-card">
+      {% include components/section-header.html section=text %}
+      <a class="button is-accent is-medium" href="mailto:{{ site.author.email }}">
+        <span class="icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+        <span>{{ text.button }}</span>
+      </a>
+      <p class="contact-social-label">{{ text.social }}</p>
+      {% include components/social-links.html class="is-large is-centered" %}
+    </div>
+  </div>
+</section>

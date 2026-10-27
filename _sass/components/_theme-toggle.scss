@@ -1,0 +1,54 @@
+// Sun / moon switch.
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  cursor: pointer;
+
+  .icon {
+    position: relative;
+    z-index: 1;
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.85rem;
+    transition: color 0.25s var(--ease);
+  }
+
+  // Moving knob behind the active icon.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: var(--surface-raised);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s var(--ease);
+  }
+
+  .theme-toggle-light {
+    color: hsl(38, 92%, 45%);
+  }
+
+  [data-theme="dark"] & {
+    &::before {
+      transform: translateX(2rem);
+    }
+
+    .theme-toggle-light {
+      color: var(--text-muted);
+    }
+
+    .theme-toggle-dark {
+      color: hsl(220, 90%, 75%);
+    }
+  }
+}

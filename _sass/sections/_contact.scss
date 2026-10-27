@@ -1,0 +1,23 @@
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 0% 0%, var(--accent-soft), transparent 50%),
+    radial-gradient(circle at 100% 100%, var(--accent-soft), transparent 50%),
+    var(--surface-raised);
+  box-shadow: var(--shadow);
+  text-align: center;
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-social-label {
+  margin: 1.75rem 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

@@ -1,24 +1,62 @@
-<meta charset="UTF-8">
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>{{ site.title }}</title>
-<meta property="og:title" content="{{site.title}}" />
-<meta property="og:description" content="{{site.description}}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{site.url}}" />
-<meta property="og:site_name" content="{{site.name}}" />
-<meta property="og:image" content="{{site.cover}}" />
-<meta property="og:image:width" content="1280" />
-<meta property="og:image:height" content="800" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:locale" content="en_US">
-<meta name="description" content="{{site.description}}">
-<meta name="keywords" content="{{site.keywords}}">
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_description = page.description | default: site.description -%}
+{%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description }}">
+<meta name="keywords" content="{{ site.keywords }}">
+<meta name="author" content="{{ site.author.name }}">
+<link rel="canonical" href="{{ canonical }}">
 
-<link rel="icon" href="/assets/svg/dark_logo.png" type="image/png">
+<!-- Link previews -->
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:image" content="{{ site.cover | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.author.name }}, {{ site.author.job_title }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:image" content="{{ site.cover | absolute_url }}">
+
+<!-- Theme: set it before the CSS loads, so the page does not flash. -->
+<meta name="color-scheme" content="light dark">
+<script>
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem("theme"); } catch (e) {}
+    if (theme !== "theme-dark" && theme !== "theme-light") {
+      var hour = new Date().getHours();
+      theme = hour >= 18 || hour < 6 ? "theme-dark" : "theme-light";
+    }
+    document.documentElement.setAttribute("data-theme", theme.replace("theme-", ""));
+  })();
+</script>
+
+<link rel="icon" href="{{ site.favicon | relative_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/svg/dark_logo.png' | relative_url }}">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-<link rel="stylesheet" href="/assets/css/main.css" hreflang="en-us">
-
-
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author.name | jsonify }},
+  "jobTitle": {{ site.author.job_title | jsonify }},
+  "email": {{ site.author.email | prepend: 'mailto:' | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "image": {{ site.cover | absolute_url | jsonify }},
+  "sameAs": {{ site.data.social | where_exp: "link", "link.url contains 'https://'" | map: "url" | jsonify }}
+}
+</script>

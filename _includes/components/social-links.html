@@ -1,0 +1,12 @@
+{% comment %}
+  Icon links from _data/social.yml. Params: class (extra CSS class, optional).
+{% endcomment %}
+<ul class="social-links {{ include.class }}">
+  {% for link in site.data.social %}
+  <li>
+    <a href="{{ link.url }}" aria-label="{{ link.title }}" title="{{ link.title }}"{% unless link.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>
+      <i class="{{ link.icon }}" aria-hidden="true"></i>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

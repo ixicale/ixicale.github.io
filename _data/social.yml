@@ -1,0 +1,11 @@
+# Contact links. They show in the hero, the contact section and the footer.
+# icon: a Font Awesome class (https://fontawesome.com/search?o=r&m=free).
+- title: Email
+  url: mailto:ixicaleescalante@gmail.com
+  icon: fa-solid fa-envelope
+- title: LinkedIn
+  url: https://www.linkedin.com/in/ixicale/
+  icon: fa-brands fa-linkedin
+- title: GitHub
+  url: https://github.com/ixicale
+  icon: fa-brands fa-github

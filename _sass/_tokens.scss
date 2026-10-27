@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// Design tokens. Change colors, radius and shadows here.
+// Bulma 1.0 reads CSS variables, so the page and Bulma use the same values.
+// -----------------------------------------------------------------------------
+
+// Brand color: teal, like the teal in the intro GIF.
+// To change it, change the hue. Then check the contrast of the buttons:
+// light theme uses white text on the color, dark theme uses dark text.
+$accent-hue: 172;
+$accent-light: hsl($accent-hue, 80%, 28%); // Light theme (white text on it).
+$accent-dark: hsl($accent-hue, 65%, 50%); // Dark theme (dark text on it).
+
+@mixin light-tokens {
+  --accent: #{$accent-light};
+  --accent-hover: #{darken($accent-light, 6%)};
+  --accent-contrast: #fff;
+  --accent-soft: hsl(#{$accent-hue}, 60%, 94%);
+  --accent-soft-text: #{darken($accent-light, 8%)};
+
+  --surface: #fff;
+  --surface-alt: hsl(221, 30%, 98%);
+  --surface-raised: #fff;
+  --logo-plate: hsl(221, 20%, 97%);
+  --line: hsl(221, 16%, 90%);
+  --text-muted: hsl(221, 10%, 40%);
+  --shadow: 0 1px 2px hsla(221, 30%, 20%, 0.06), 0 8px 24px -12px hsla(221, 30%, 20%, 0.18);
+  --shadow-hover: 0 2px 4px hsla(221, 30%, 20%, 0.08), 0 16px 32px -12px hsla(221, 30%, 20%, 0.25);
+  --nav-bg: hsla(0, 0%, 100%, 0.82);
+}
+
+@mixin dark-tokens {
+  --accent: #{$accent-dark};
+  --accent-hover: #{lighten($accent-dark, 6%)};
+  --accent-contrast: hsl(#{$accent-hue}, 45%, 10%);
+  --accent-soft: #{rgba($accent-dark, 0.14)};
+  --accent-soft-text: #{lighten($accent-dark, 12%)};
+
+  --surface: hsl(221, 14%, 9%);
+  --surface-alt: hsl(221, 14%, 11%);
+  --surface-raised: hsl(221, 14%, 14%);
+  --logo-plate: hsl(221, 20%, 94%);
+  --line: hsl(221, 14%, 21%);
+  --text-muted: hsl(221, 10%, 66%);
+  --shadow: 0 1px 2px hsla(0, 0%, 0%, 0.3), 0 8px 24px -12px hsla(0, 0%, 0%, 0.6);
+  --shadow-hover: 0 2px 4px hsla(0, 0%, 0%, 0.35), 0 16px 32px -12px hsla(0, 0%, 0%, 0.7);
+  --nav-bg: hsla(221, 14%, 9%, 0.8);
+}
+
+:root {
+  --radius: 0.75rem;
+  --radius-lg: 1.25rem;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --section-space: 6rem;
+  --nav-height: 3.75rem;
+
+  // Bulma overrides.
+  --bulma-family-primary: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bulma-family-code: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --bulma-navbar-height: var(--nav-height);
+  --bulma-radius: 0.5rem;
+
+  @include light-tokens;
+}
+
+// No saved theme and no JavaScript: follow the system setting.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-tokens;
+  }
+}
+
+[data-theme="light"] {
+  @include light-tokens;
+}
+
+[data-theme="dark"] {
+  @include dark-tokens;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --section-space: 4rem;
+  }
+}

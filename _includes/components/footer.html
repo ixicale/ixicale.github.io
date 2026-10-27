@@ -1,0 +1,15 @@
+{%- assign text = site.data.content.footer -%}
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer-inner">
+      <p class="site-footer-credit">
+        {{ text.credit }} <strong>{{ site.author.name }}</strong> · {{ site.time | date: '%Y' }}
+      </p>
+      {% include components/social-links.html %}
+      <a class="made-with" href="https://bulma.io" target="_blank" rel="noopener">
+        <span>{{ text.made_with }}</span>
+        <img src="{{ '/assets/images/company/bulma.png' | relative_url }}" alt="Bulma" width="96" height="24" loading="lazy">
+      </a>
+    </div>
+  </div>
+</footer>

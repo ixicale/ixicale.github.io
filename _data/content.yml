@@ -1,0 +1,74 @@
+# -----------------------------------------------------------------------------
+# Page text. Edit this file to change the words on the page.
+# Lists (experience, projects, skills, social links) have their own files.
+# -----------------------------------------------------------------------------
+
+# Links in the top menu. "id" must match a section id below.
+nav:
+  - title: About
+    id: about
+  - title: Skills
+    id: skills
+  - title: Experience
+    id: experience
+  - title: Projects
+    id: projects
+  - title: Contact
+    id: contact
+
+hero:
+  greeting: Hey! Xicale's here 👋
+  title: Senior Fullstack Developer
+  subtitle: I code beautifully simple things, and I love what I do.
+  # These lines rotate under the title.
+  rotating:
+    - Hey! Xicale's here 👋
+    - 5+ years of coding experience
+    - Always learning new things
+  # Two versions: one for the light theme (white background), one for the dark theme.
+  image: /assets/gifs/intro.gif
+  image_dark: /assets/gifs/intro-dark.gif
+  image_alt: Illustration of a computer, a phone and charts
+  primary_button: Start a conversation
+  secondary_button: See my experience
+
+about:
+  id: about
+  eyebrow: About me
+  title: Hi, I'm Xicale. Nice to meet you
+  paragraphs:
+    - Looking back on my journey, it's been a whirlwind of innovation and growth. From designing seamless deposit processes and robust banking APIs to engineering the backend of logistics platforms that ensured every package found its way.
+    - There's something magical about merging tech with the joy of life's big moments, like helping couples plan their dream day entirely online. And who could forget the thrill of venturing into the world of IoT, where every line of code meant a new way to connect and control our digital environment?
+    - Each project was a chapter, filled with challenges that pushed me to learn and grow, and triumphs that reminded me why I love what I do. It's been a journey of passion, curiosity, and relentless pursuit of innovation. Here's to the next chapter!
+
+skills:
+  id: skills
+  eyebrow: Toolbox
+  title: Skills & tools
+  subtitle: The languages, frameworks and services I use every day.
+
+experience:
+  id: experience
+  eyebrow: Career
+  title: Experience
+  subtitle: Here are some of the companies I've worked with.
+  button: What did I do?
+  modal_techs: Some of the technologies used
+
+projects:
+  id: projects
+  eyebrow: Side work
+  title: Do you want to know more about my personal projects?
+  subtitle: Here are some of the projects I have worked on in the past.
+
+contact:
+  id: contact
+  eyebrow: Contact
+  title: Interested in collaborating with me?
+  subtitle: I'm always open to discussing product work or partnership opportunities.
+  button: Start a conversation
+  social: Or find me on social media
+
+footer:
+  credit: Designed & Developed by
+  made_with: Made with

@@ -1,0 +1,31 @@
+{%- assign text = site.data.content.projects -%}
+<section class="section site-section is-alt" id="{{ text.id }}" aria-labelledby="{{ text.id }}-title">
+  <div class="container">
+    {% include components/section-header.html section=text %}
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <article class="panel-card project-card">
+        <h3 class="panel-card-title is-large">{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        {% if project.used %}
+        <ul class="tech-list is-compact is-text">
+          {% for used in project.used %}<li class="tech-tag"><span>{{ used.tech }}</span></li>{% endfor %}
+        </ul>
+        {% endif %}
+        <div class="project-links">
+          {% if project.url %}
+          <a href="{{ project.url }}" target="_blank" rel="noopener">
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Visit
+          </a>
+          {% endif %}
+          {% if project.code %}
+          <a href="{{ project.code }}" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

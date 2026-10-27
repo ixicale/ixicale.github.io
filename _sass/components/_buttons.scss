@@ -1,0 +1,41 @@
+// Brand button: <a class="button is-accent">. Add "is-light" for a soft style.
+.button.is-accent {
+  border: 0;
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+  transition: background-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--accent-hover);
+    color: var(--accent-contrast);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+  }
+
+  &.is-light {
+    background-color: var(--accent-soft);
+    color: var(--accent-soft-text);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--accent);
+      color: var(--accent-contrast);
+    }
+  }
+}
+
+// Outline button for second actions.
+.button.is-ghost-outline {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--bulma-text-strong);
+  font-weight: 600;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
