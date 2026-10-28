@@ -1,0 +1,42 @@
+// Scroll effects (assets/js/scroll-fx.js).
+// 1. Zoom on focus: the section in the middle of the screen is full size.
+//    The other sections are a little smaller and dimmer.
+// 2. Staggered content: titles, cards and tags come in one by one.
+// The script adds "fx-on" to <html> only when the device allows motion,
+// so without the script (or with "reduce motion") the page does not move.
+
+$fx-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+.fx-on {
+  .site-section > .container {
+    transform: scale(0.92);
+    transform-origin: 50% 30%;
+    opacity: 0.45;
+    transition: opacity 1s $fx-ease, transform 1s $fx-ease;
+  }
+
+  .site-section.is-focus > .container {
+    transform: none;
+    opacity: 1;
+  }
+
+  .fx-item {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+    transition: opacity 0.8s $fx-ease, transform 0.8s $fx-ease;
+    transition-delay: calc(var(--i, 0) * 110ms);
+
+    .tech-tag {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.55s $fx-ease, transform 0.55s $fx-ease;
+      transition-delay: calc(var(--i, 0) * 110ms + 320ms + var(--j, 0) * 45ms);
+    }
+  }
+
+  .is-in .fx-item,
+  .is-in .fx-item .tech-tag {
+    opacity: 1;
+    transform: none;
+  }
+}

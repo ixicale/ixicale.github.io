@@ -80,6 +80,36 @@ CloudAndDeploymentServices:
   - name: Netlify
     icon: /assets/images/netlify.png
 
+AITools:
+  - name: Claude
+    icon: /assets/images/claude.png
+  - name: Claude Code
+    icon: /assets/images/claude-code.png
+  - name: Cursor
+    icon: /assets/images/cursor.png
+  - name: GitHub Copilot
+    icon: /assets/images/github-copilot.png
+  - name: ChatGPT
+    icon: /assets/images/chatgpt.png
+  - name: DeepSeek
+    icon: /assets/images/deepseek.png
+
+PrivacyAndSecurity:
+  - name: Bitwarden
+    icon: /assets/images/bitwarden.png
+  - name: Proton Mail
+    icon: /assets/images/proton-mail.png
+  - name: Proton Pass
+    icon: /assets/images/proton-pass.png
+  - name: Proton VPN
+    icon: /assets/images/proton-vpn.png
+  - name: Brave
+    icon: /assets/images/brave.png
+
+Productivity:
+  - name: Slack
+    icon: /assets/images/slack.png
+
 OperatingSystems:
   - name: Windows
     icon: /assets/images/windows-10.png
@@ -98,18 +128,24 @@ Methodologies:
   - name: Kanban
 
 sections:
-  - name: Dev Languages & Frameworks
-    items: DevLanguagesAndFrameworks
-  - name: Markup & Styling
-    items: MarkupAndStyling
-  - name: Database Technologies
-    items: DatabaseTechnologies
+  - name: Languages & Frameworks
+    items:
+      - DevLanguagesAndFrameworks
+      - MarkupAndStyling
+  - name: Data & Cloud
+    items:
+      - DatabaseTechnologies
+      - CloudAndDeploymentServices
   - name: Development Tools
     items: DevelopmentTools
-  - name: Management Tools
-    items: ManagementTools
-  - name: Cloud & Deployment Services
-    items: CloudAndDeploymentServices
+  - name: Team & Productivity
+    items:
+      - ManagementTools
+      - Productivity
+  - name: AI Tools
+    items: AITools
+  - name: Privacy & Security
+    items: PrivacyAndSecurity
   # - name: Kubernetes
   #   icon: https://img.icons8.com/color/48/000000/kubernetes.png
   #   sections:
