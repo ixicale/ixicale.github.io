@@ -83,8 +83,32 @@ CloudAndDeploymentServices:
 AITools:
   - name: Claude
     icon: /assets/images/claude.png
+  - name: Claude Code
+    icon: /assets/images/claude-code.png
   - name: Cursor
     icon: /assets/images/cursor.png
+  - name: GitHub Copilot
+    icon: /assets/images/github-copilot.png
+  - name: ChatGPT
+    icon: /assets/images/chatgpt.png
+  - name: DeepSeek
+    icon: /assets/images/deepseek.png
+
+PrivacyAndSecurity:
+  - name: Bitwarden
+    icon: /assets/images/bitwarden.png
+  - name: Proton Mail
+    icon: /assets/images/proton-mail.png
+  - name: Proton Pass
+    icon: /assets/images/proton-pass.png
+  - name: Proton VPN
+    icon: /assets/images/proton-vpn.png
+  - name: Brave
+    icon: /assets/images/brave.png
+
+Productivity:
+  - name: Slack
+    icon: /assets/images/slack.png
 
 OperatingSystems:
   - name: Windows
@@ -118,6 +142,10 @@ sections:
     items: CloudAndDeploymentServices
   - name: AI Tools
     items: AITools
+  - name: Privacy & Productivity
+    items:
+      - PrivacyAndSecurity
+      - Productivity
   # - name: Kubernetes
   #   icon: https://img.icons8.com/color/48/000000/kubernetes.png
   #   sections:

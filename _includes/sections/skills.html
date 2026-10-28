@@ -7,8 +7,10 @@
       <article class="panel-card">
         <h3 class="panel-card-title">{{ group.name }}</h3>
         <ul class="tech-list">
-          {% for item in site.data.skills[group.items] %}
+          {% for list in group.items %}
+          {% for item in site.data.skills[list] %}
           {% include components/tech-tag.html item=item %}
+          {% endfor %}
           {% endfor %}
         </ul>
       </article>
