@@ -52,8 +52,10 @@
 {%- assign current_job = site.data.experience | first -%}
 {%- assign skill_names = "" | split: "" -%}
 {%- for section in site.data.skills.sections -%}
-  {%- assign names = site.data.skills[section.items] | map: "name" -%}
-  {%- assign skill_names = skill_names | concat: names -%}
+  {%- for list in section.items -%}
+    {%- assign names = site.data.skills[list] | map: "name" -%}
+    {%- assign skill_names = skill_names | concat: names -%}
+  {%- endfor -%}
 {%- endfor -%}
 {%- assign same_as = site.data.social | where_exp: "link", "link.url contains 'https://'" | map: "url" -%}
 <script type="application/ld+json">
