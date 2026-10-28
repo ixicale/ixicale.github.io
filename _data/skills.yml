@@ -128,24 +128,24 @@ Methodologies:
   - name: Kanban
 
 sections:
-  - name: Dev Languages & Frameworks
-    items: DevLanguagesAndFrameworks
-  - name: Markup & Styling
-    items: MarkupAndStyling
-  - name: Database Technologies
-    items: DatabaseTechnologies
+  - name: Languages & Frameworks
+    items:
+      - DevLanguagesAndFrameworks
+      - MarkupAndStyling
+  - name: Data & Cloud
+    items:
+      - DatabaseTechnologies
+      - CloudAndDeploymentServices
   - name: Development Tools
     items: DevelopmentTools
-  - name: Management Tools
-    items: ManagementTools
-  - name: Cloud & Deployment Services
-    items: CloudAndDeploymentServices
+  - name: Team & Productivity
+    items:
+      - ManagementTools
+      - Productivity
   - name: AI Tools
     items: AITools
-  - name: Privacy & Productivity
-    items:
-      - PrivacyAndSecurity
-      - Productivity
+  - name: Privacy & Security
+    items: PrivacyAndSecurity
   # - name: Kubernetes
   #   icon: https://img.icons8.com/color/48/000000/kubernetes.png
   #   sections:
