@@ -80,6 +80,12 @@ CloudAndDeploymentServices:
   - name: Netlify
     icon: /assets/images/netlify.png
 
+AITools:
+  - name: Claude
+    icon: /assets/images/claude.png
+  - name: Cursor
+    icon: /assets/images/cursor.png
+
 OperatingSystems:
   - name: Windows
     icon: /assets/images/windows-10.png
@@ -110,6 +116,8 @@ sections:
     items: ManagementTools
   - name: Cloud & Deployment Services
     items: CloudAndDeploymentServices
+  - name: AI Tools
+    items: AITools
   # - name: Kubernetes
   #   icon: https://img.icons8.com/color/48/000000/kubernetes.png
   #   sections:
